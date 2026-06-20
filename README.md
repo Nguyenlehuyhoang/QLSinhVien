@@ -19,3 +19,4 @@
 - Java Swing
 - NetBeans IDE
 - GitHub SCM
+"Phạm Quốc Huy đã cập nhật validate điểm"
