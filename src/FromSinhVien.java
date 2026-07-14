@@ -213,6 +213,15 @@ if(txtMaSV.getText().trim().isEmpty()
 
     try {
         Float.parseFloat(txtDiem.getText());
+        
+        float diem = Float.parseFloat(txtDiem.getText());
+
+if (diem < 0 || diem > 10) {
+    JOptionPane.showMessageDialog(
+            this,
+            "Điểm phải từ 0 đến 10");
+    return;
+}
 
         DefaultTableModel model =
         (DefaultTableModel) tblSinhVien.getModel();
