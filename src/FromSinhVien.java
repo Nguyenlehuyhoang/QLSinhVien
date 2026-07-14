@@ -217,7 +217,20 @@ if(txtMaSV.getText().trim().isEmpty()
         DefaultTableModel model =
         (DefaultTableModel) tblSinhVien.getModel();
         
-        
+        for (int i = 0; i < model.getRowCount(); i++) {
+            Object maSVTrongBang = model.getValueAt(i, 0);
+
+            if (maSVTrongBang != null
+                    && maSVTrongBang.toString()
+                            .equalsIgnoreCase(txtMaSV.getText().trim())) {
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Mã sinh viên đã tồn tại"
+                );
+                return;
+            }
+        }
 
         model.addRow(new Object[]{
             txtMaSV.getText(),
